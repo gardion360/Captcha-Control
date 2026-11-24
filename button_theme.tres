@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://js8kvsrsfrd6"]
+
+[ext_resource type="FontFile" uid="uid://giusbak6rqr7" path="res://CyberpunkWaifus.ttf" id="1_y3u7b"]
+
+[sub_resource type="FontVariation" id="FontVariation_4c57u"]
+base_font = ExtResource("1_y3u7b")
+
+[sub_resource type="FontVariation" id="FontVariation_efxa6"]
+
+[resource]
+default_font = SubResource("FontVariation_efxa6")
+default_font_size = 60
+Button/fonts/font = SubResource("FontVariation_4c57u")

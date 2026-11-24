@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://byayb23c2p3r1"]
+
+[ext_resource type="FontFile" uid="uid://giusbak6rqr7" path="res://CyberpunkWaifus.ttf" id="1_jnl6m"]
+
+[resource]
+Label/font_sizes/font_size = 45
+Label/fonts/font = ExtResource("1_jnl6m")
