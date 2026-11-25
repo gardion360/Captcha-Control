@@ -1,0 +1,320 @@
+[gd_scene format=3 uid="uid://mgp02mkor0at"]
+
+[ext_resource type="PackedScene" uid="uid://b65qmq1hydnfu" path="res://models/Room.glb" id="2_7mycd"]
+[ext_resource type="Script" uid="uid://dwuodcdi51m62" path="res://Scripts/poster.gd" id="3_272bh"]
+[ext_resource type="Script" uid="uid://xhet1umhyrkl" path="res://Scripts/player_camera.gd" id="4_5vw27"]
+[ext_resource type="Script" uid="uid://bba60hlfjehxw" path="res://Scripts/computer.gd" id="5_7mycd"]
+[ext_resource type="Script" uid="uid://c6ey0i5vv47g" path="res://Scripts/Monitor_display.gd" id="5_kek77"]
+[ext_resource type="FontFile" uid="uid://giusbak6rqr7" path="res://CyberpunkWaifus.ttf" id="6_272bh"]
+[ext_resource type="Script" uid="uid://d33d3poo1myvc" path="res://computer_menu.gd" id="7_5vw27"]
+[ext_resource type="Theme" uid="uid://js8kvsrsfrd6" path="res://button_theme.tres" id="8_5vw27"]
+[ext_resource type="Theme" uid="uid://byayb23c2p3r1" path="res://title_label_theme.tres" id="8_kek77"]
+[ext_resource type="Theme" uid="uid://dqgkjmh1otyxw" path="res://body_theme.tres" id="9_4c57u"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hrfpl"]
+
+[sub_resource type="Sky" id="Sky_drsw1"]
+sky_material = SubResource("ProceduralSkyMaterial_hrfpl")
+
+[sub_resource type="Environment" id="Environment_3owqy"]
+background_mode = 2
+sky = SubResource("Sky_drsw1")
+ambient_light_color = Color(0.11119685, 0.11119684, 0.11119684, 1)
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_4c57u"]
+
+[sub_resource type="Compositor" id="Compositor_efxa6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4c57u"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.25490198)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_272bh"]
+data = PackedVector3Array(-0.4059, -0.5074, 3.6541998, -1.7033, 0.7381, 2.3234, -1.7126, -0.484, 2.3021998, -0.4059, -0.5074, 3.6541998, -0.39659998, 0.7147, 3.6754, -1.7033, 0.7381, 2.3234)
+
+[sub_resource type="FontVariation" id="FontVariation_u2xpv"]
+base_font = ExtResource("6_272bh")
+
+[sub_resource type="FontVariation" id="FontVariation_nl5no"]
+base_font = SubResource("FontVariation_u2xpv")
+
+[sub_resource type="FontVariation" id="FontVariation_w3t28"]
+base_font = SubResource("FontVariation_nl5no")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.225, 0.225, 0.225, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="FontVariation" id="FontVariation_0cxnv"]
+base_font = ExtResource("6_272bh")
+variation_embolden = 0.15
+
+[sub_resource type="FontVariation" id="FontVariation_uqml1"]
+base_font = SubResource("FontVariation_0cxnv")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w48qg"]
+
+[sub_resource type="Theme" id="Theme_lquwl"]
+Button/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 4
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 16
+Button/fonts/font = SubResource("FontVariation_w3t28")
+Button/styles/disabled = SubResource("StyleBoxFlat_kek77")
+Button/styles/focus = SubResource("StyleBoxFlat_4c57u")
+Button/styles/hover = SubResource("StyleBoxFlat_efxa6")
+Button/styles/normal = SubResource("StyleBoxFlat_dg77c")
+Button/styles/pressed = SubResource("StyleBoxFlat_ycdy4")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 31
+Label/fonts/font = SubResource("FontVariation_uqml1")
+Label/styles/focus = SubResource("StyleBoxFlat_4c57u")
+Label/styles/normal = SubResource("StyleBoxEmpty_w48qg")
+
+[node name="Node3D" type="Node3D" unique_id=1533783927]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1689879012]
+environment = SubResource("Environment_3owqy")
+camera_attributes = SubResource("CameraAttributesPractical_4c57u")
+compositor = SubResource("Compositor_efxa6")
+
+[node name="Room2" parent="." unique_id=1532741255 instance=ExtResource("2_7mycd")]
+
+[node name="poster_1" parent="Room2" index="7" unique_id=600657958]
+script = ExtResource("3_272bh")
+file_name = null
+surface_index = null
+max_size = null
+video_resolution = null
+
+[node name="Window" parent="Room2" index="11" unique_id=653125452]
+transform = Transform3D(0.50465626, 0, 0, 0, 0.50465626, 0, 0, 0, 0.50465626, -0.07077193, 0.9199712, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_4c57u")
+
+[node name="player" type="Node3D" parent="." unique_id=1992475152]
+
+[node name="Camera3D" type="Camera3D" parent="player" unique_id=392918305]
+transform = Transform3D(0.00080255046, 0, 0.99999976, 0, 1, 0, -0.99999976, 0, 0.00080255046, 0.4771731, 0.755, 0.75172997)
+fov = 60.2
+near = 0.5
+script = ExtResource("4_5vw27")
+
+[node name="Computer" type="Node3D" parent="." unique_id=2022661674]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Computer" unique_id=1663802558 node_paths=PackedStringArray("computer_menu", "player_camera")]
+script = ExtResource("5_7mycd")
+computer_menu = NodePath("../../ui/Computer menu")
+player_camera = NodePath("../../player/Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Computer/StaticBody3D" unique_id=409470142]
+transform = Transform3D(1, 0, 0, 0, 0.99985063, 0.017284386, 0, -0.017284386, 0.99985063, 0, 0.0091302395, 0.05094725)
+shape = SubResource("ConcavePolygonShape3D_272bh")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=144560340]
+
+[node name="display_computer" type="Node" parent="Node3D" unique_id=799416424]
+
+[node name="display_upper" type="Node" parent="Node3D" unique_id=1760708241 node_paths=PackedStringArray("screen_mesh")]
+script = ExtResource("5_kek77")
+screen_mesh = NodePath("../../Room2/Monitor2")
+
+[node name="display_vertical" type="Node" parent="Node3D" unique_id=1918475211 node_paths=PackedStringArray("screen_mesh")]
+script = ExtResource("5_kek77")
+screen_mesh = NodePath("../../Room2/upper_monitor")
+
+[node name="display_side" type="Node" parent="Node3D" unique_id=100320932 node_paths=PackedStringArray("screen_mesh")]
+script = ExtResource("5_kek77")
+screen_mesh = NodePath("../../Room2/vertical_monitor")
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=1042722338]
+
+[node name="Computer menu" type="Control" parent="ui" unique_id=1911831924]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+mouse_behavior_recursive = 2
+theme = SubResource("Theme_lquwl")
+script = ExtResource("7_5vw27")
+
+[node name="Background" type="ColorRect" parent="ui/Computer menu" unique_id=585690281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.07169259, 0.071692534, 0.071692534, 1)
+
+[node name="Panel" type="PanelContainer" parent="ui/Computer menu" unique_id=15853423]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -574.0
+offset_top = -323.5
+offset_right = 574.0
+offset_bottom = 323.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/Computer menu/Panel" unique_id=2118894485]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="title" type="Label" parent="ui/Computer menu/Panel/VBoxContainer" unique_id=1240821080]
+layout_mode = 2
+size_flags_vertical = 2
+theme = ExtResource("8_kek77")
+text = "Border Control.exe"
+
+[node name="infolabel" type="Label" parent="ui/Computer menu/Panel/VBoxContainer" unique_id=99113802]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("9_4c57u")
+text = "Name-"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ui/Computer menu/Panel/VBoxContainer" unique_id=324249377]
+layout_mode = 2
+
+[node name="ApproveButton" type="Button" parent="ui/Computer menu/Panel/VBoxContainer/HBoxContainer" unique_id=14983195]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme = ExtResource("8_5vw27")
+text = "Approve"
+
+[node name="DenyButton" type="Button" parent="ui/Computer menu/Panel/VBoxContainer/HBoxContainer" unique_id=1311012402]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+theme = ExtResource("8_5vw27")
+text = "Deny"
+
+[node name="LogOffButton" type="Button" parent="ui/Computer menu/Panel/VBoxContainer" unique_id=518217053]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme = ExtResource("8_5vw27")
+text = "Quit"
+autowrap_mode = 3
+autowrap_trim_flags = 192
+
+[node name="Crosshair" type="ColorRect" parent="ui" unique_id=1106987040]
+custom_minimum_size = Vector2(6, 6)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[editable path="Room2"]
