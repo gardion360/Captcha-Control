@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 Util="*uid://bo4qpdnhblulf"
 Converter="*uid://dyedycy3no43t"
-Ffmpeg="*res://ffmpeg/ffmpeg.exe"
 
 [display]
 
